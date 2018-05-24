@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<aiml>
+  <category>
+    <pattern>WHATS THE WEATHER</pattern>
+    <template><srai> WEATHER </srai></template>
+  </category>
+  <category>
+    <pattern>WHATS THE WEATHER *</pattern>
+    <template><srai> WEATHER <star/></srai></template>
+  </category>
+  <category>
+    <pattern>WEATHER IN *</pattern>
+    <template><set name="location"><star/></set>
+    <system>./scripts/weather.py location</system>
+    </template>
+  </category>
+</aiml>
