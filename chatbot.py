@@ -30,9 +30,9 @@ while True:
     input_text = input("> ")
     response = k.respond(input_text)
     language = 'en'
-    myobj = gTTS(text=response, lang=language, slow=False)
-    myobj.save("welcome.mp3")
+    # myobj = gTTS(text=response, lang=language, slow=False)
+    # myobj.save("welcome.mp3")
 
     # Playing the converted file
-    os.system("welcome.mp3")
+    # os.system("welcome.mp3")
     print(response)

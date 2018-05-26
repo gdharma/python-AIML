@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+	<category>
+    <pattern>GOOGLE *</pattern>
+    <template>ok
+    <oob><mrl><service>python</service><method>exec</method>
+    <param>BareBonesBrowserLaunch.openURL("https://www.google.com/search?newwindow=1&safe=off&site=webhp&source=hp&q=<star/>")</param>
+    </mrl></oob>
+    </template>
+    </category>
+</aiml>

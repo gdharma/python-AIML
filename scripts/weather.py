@@ -9,9 +9,9 @@ from sys import argv
 import aiml
 BRAIN_FILE="brain.dump"
 kernel = aiml.Kernel()
-ZIPCODE=kernel.getPredicate("location")
+# ZIPCODE=kernel.getPredicate("location")
 ZIPCODE= argv[1].upper()
-
+# ZIPCODE= "Chennai"
 try:
 #   if day == 'TODAY':
 #     day = 0
@@ -27,7 +27,7 @@ try:
 # 	      'FRIDAY',
 # 	      'SATURDAY']
 #     day = week.index(day)+weekday+1
-    
+
     JSONresponse=urllib.request.urlopen('http://api.openweathermap.org/data/2.5/weather?q='+ZIPCODE+'&APPID=7e453708f8679396e13bbd415ec2e132&units=metric').read()
     weatherReport=json.loads(JSONresponse)
     minweatherReport=weatherReport['main']['temp_min']
