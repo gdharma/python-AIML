@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml version="1.0">
-
-
 	<category>
 		<pattern>SEARCH WEATHER *</pattern>
-		<template>Give me a second...
+		<template>
 			<think><set name="topic">WEATHER</set></think>
 			<system>./scripts/weather.py <star /></system></template>
 		</category>

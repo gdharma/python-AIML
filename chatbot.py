@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import os
 import aiml
-from gtts import gTTS
+# from gtts import gTTS
 import time
 
 BRAIN_FILE="brain.dump"
@@ -22,7 +22,7 @@ print("Parsing aiml files")
 k.bootstrap(learnFiles="std-startup.aiml", commands="load aiml b")
 print("Saving brain file: " + BRAIN_FILE)
 k.saveBrain(BRAIN_FILE)
-
+k.learn("alice.aiml")
 
 # Endless loop which passes the input to the bot and prints
 # its response
