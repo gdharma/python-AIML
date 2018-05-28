@@ -18,6 +18,6 @@ try:
     minweatherReport=weatherReport['main']['temp_min']
     maxweatherReport = weatherReport['main']['temp_max']
     mainweatherReport=weatherReport['weather'][0]['description']
-    print("Today, it will be",mainweatherReport,"with a high of",minweatherReport,"degrees and a low of",minweatherReport,"degrees.")
+    print("Today, it will be",mainweatherReport,"with a high of",maxweatherReport,"degrees and a low of",minweatherReport,"degrees.")
 except:
     print("Something went wrong")

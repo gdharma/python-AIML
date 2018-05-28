@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+	<category>
+        <pattern>WHAT DO KNOW ABOUT *</pattern>
+        <template>
+            <system>./scripts/wikiAPI.py <star /></system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS *</pattern>
+        <template>
+            <srai>WHAT DO KNOW ABOUT <star /></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELL ME ABOUT *</pattern>
+        <template>
+            <srai>WHAT DO KNOW ABOUT <star /></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* TELL ME ABOUT IT</pattern>
+        <template>
+            <srai>WHAT DO KNOW ABOUT <star /></srai>
+        </template>
+    </category>
+</aiml>

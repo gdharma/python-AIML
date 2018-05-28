@@ -4,8 +4,10 @@
         <template>
             <!-- Load standard AIML set -->
             <learn>standard/alice.aiml</learn>
+            <learn>standard/GoogleQuery.aiml</learn>
             <learn>standard/Greetings.aiml</learn>
             <learn>standard/weather.aiml</learn>
+            <learn>standard/searchwiki.aiml</learn>
             <learn>standard/JiraQueries.aiml</learn>
         </template>
     </category>

@@ -8,19 +8,19 @@ jiraUserName="AF25454"
 jiraPassword="May@2018"
 # jql=input("Enter the text")
 jiraURL="https://jira.anthem.com"
-jql= argv[1].upper()
-# jql1='issueType=Story AND assignee =AF25454'
+# jql= argv[1].upper()
+jql1='issueType=Story AND assignee =AF25454'
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 options = {'server': jiraURL,'verify': False}
 
 try:
     jira = JIRA (options, basic_auth=(jiraUserName, jiraPassword))
-    issues = jira.search_issues (jql)
+    issues = jira.search_issues (jql1)
     for issue in issues:
         print(issue.key)
 
 except:
-  print("Something went wrong")
+    print("Something went wrong")
 
 
 # jiraPython="https://community.atlassian.com/t5/Jira-Core-questions/List-all-the-issues-of-a-project-with-JIRA-Python/qaq-p/350521"

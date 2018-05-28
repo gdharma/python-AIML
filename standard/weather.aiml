@@ -25,6 +25,13 @@
 		</category>
 
 		<category>
+			<pattern>WEATHER IN *</pattern>
+			<template>
+				<srai>SEARCH WEATHER <star/></srai>
+			</template>
+		</category>
+
+		<category>
 			<pattern>* WEATHER</pattern>
 			<template>
 				<srai>SEARCH WEATHER <star/></srai>

@@ -1,11 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml version="1.0">
 	<category>
-    <pattern>GOOGLE *</pattern>
-    <template>ok
-    <oob><mrl><service>python</service><method>exec</method>
-    <param>BareBonesBrowserLaunch.openURL("https://www.google.com/search?newwindow=1&safe=off&site=webhp&source=hp&q=<star/>")</param>
-    </mrl></oob>
-    </template>
+        <pattern>SEARCH FOR *</pattern>
+        <template>
+             <random>
+               <li>Launching browser </li>
+               <li>Searching for you! </li>
+               <li>Looking on the net! </li>
+            </random>
+            <system>./scripts/GoogleAPI.py <star /></system>
+        </template>
     </category>
 </aiml>
