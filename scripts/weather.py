@@ -11,6 +11,7 @@ import aiml
 # ZIPCODE=kernel.getPredicate("weather")
 ZIPCODE=argv[1].upper()
 # ZIPCODE= 'Chennai'
+# ZIPCODE=input("What location?")
 try:
     JSONresponse=urllib.request.urlopen('http://api.openweathermap.org/data/2.5/weather?q='+ZIPCODE+'&APPID=7e453708f8679396e13bbd415ec2e132&units=metric').read()
     str_response = JSONresponse.decode ('utf-8')

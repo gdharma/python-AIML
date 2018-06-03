@@ -6,7 +6,6 @@
 			<think><set name="topic">WEATHER</set></think>
 			<system>./scripts/weather.py <star /></system></template>
 		</category>
-
 		<topic name="WEATHER">
 		  <category>
 			<pattern>*</pattern>
@@ -21,6 +20,13 @@
 			<pattern>WHATS THE WEATHER IN *</pattern>
 			<template>
 				<srai>SEARCH WEATHER <star/></srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>WHATS THE WEATHER IN</pattern>
+			<template>
+			<system>./scripts/weather.py</system>
 			</template>
 		</category>
 
