@@ -2,13 +2,13 @@ from symbol import argument
 from sys import argv
 
 import requests
-import switch as switch
+
 
 
 import urllib3
 
-# project="GET CONTRACT"
-project=argv[1].upper()
+project="GET CONTRACT"
+# project=argv[1].upper()
 if project in "GET CONTRACT":
     host = "https://sit4.internal2.eportal.wellpoint.com/services/eligibilityDomain/v1/eligibilityService"
     # request="<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ser=\"http://service.eligibility.middletier.ebiz.wellpoint.com/\">\n" + "<soapenv:Header>\n" + "<wsse:Security soapenv:mustUnderstand=\"0\" xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\">\n" + "<wsse:UsernameToken wsu:Id=\"UsernameToken-62194613\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\">\n" + "<wsse:Username>srcLDAPescWSSecurity</wsse:Username>\n" + "<wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText\">St@rt100</wsse:Password>\n" + "</wsse:UsernameToken>\n" + "</wsse:Security>\n" + "</soapenv:Header>\n + <soapenv:Body>\n" + "<ser:getContract>\n" + "<sourceSystem>" "WGS" "</sourceSystem>\n" + "<cachingRequestHeader>\n" + "<forceLiveResponse>true</forceLiveResponse>\n" + "</cachingRequestHeader>\n" + "<hcid>""243T40468""</hcid>\n" + "</ser:getContract>\n" + "</soapenv:Body>\n" + "</soapenv:Envelope> \n"
