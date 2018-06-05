@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml version="1.0">
 	<category>
-        <pattern>RUN SOAP *</pattern>
+        <pattern>RUN SOAP * FOR MEMBER *</pattern>
         <template>
-            <system>./scripts/soapAPI.py <star /></system>
+        <think> <set name="soap"> <star index = "1"/></set></think>
+        <think> <set name="user"> <star index = "2"/></set></think>
+            <system>./scripts/soapAPI.py <star index="1" /><star index="2" /></system>
         </template>
     </category>
 </aiml>
