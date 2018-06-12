@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from sys import argv
 
+import requests
 import urllib3
 from jira import JIRA
 
@@ -10,20 +11,23 @@ jiraUserName=getConfig("Anthem","user")
 jiraPassword=getConfig("Anthem","password")
 
 # jql=input("Enter the text")
-jiraURL="https://jira.anthem.com"
-# jql= argv[1].upper()
-jql1='issueType=Story AND assignee =AF25454'
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-options = {'server': jiraURL,'verify': False}
+bambooUrl="https://bamboo.anthem.com"
 
-try:
-    jira = JIRA (options, basic_auth=(jiraUserName, jiraPassword))
-    issues = jira.search_issues (jql1)
-    for issue in issues:
-        print(issue.key)
+# urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-except:
-    print("Something went wrong")
+
+url = bambooUrl+'/rest/api/latest/queue/OCP-THUNDERBIRDNEW'
+# bambooUrl1=bambooUrl+'/rest/api/latest/info'
+headers = {'Content-Type': 'application/json','Accepts': 'application/json'}
+
+    # create page
+    # [USERNAME], i.e.: admin
+    # [PASSWORD], i.e.: admin
+urllib3.disable_warnings (urllib3.exceptions.InsecureRequestWarning)
+r = requests.post(url, headers=headers, auth=(jiraUserName, jiraPassword),verify=False)
+print (r.status_code)
+print (r.text)
+
 
 
 # jiraPython="https://community.atlassian.com/t5/Jira-Core-questions/List-all-the-issues-of-a-project-with-JIRA-Python/qaq-p/350521"
