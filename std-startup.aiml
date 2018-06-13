@@ -10,6 +10,7 @@
             <learn>standard/searchwiki.aiml</learn>
             <learn>standard/JiraQueries.aiml</learn>
             <learn>standard/SOAPAPI.aiml</learn>
+            <learn>standard/Bamboo.aiml</learn>
         </template>
     </category>
 </aiml>

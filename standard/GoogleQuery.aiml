@@ -11,4 +11,10 @@
             <system>./scripts/GoogleAPI.py <star /></system>
         </template>
     </category>
+    <category>
+        <pattern>GOOGLE *</pattern>
+        <template>
+             <srai>SEARCH FOR <star/></srai>
+        </template>
+    </category>
 </aiml>

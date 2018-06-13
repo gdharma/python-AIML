@@ -20,7 +20,7 @@ def weather(ZIPCODE):
         minweatherReport=weaterReport['main']['temp_min']
         maxweatherReport = weaterReport['main']['temp_max']
         mainweatherReport=weaterReport['weather'][0]['description']
-        print("Today, it will be",mainweatherReport,"with a high of",maxweatherReport,"degrees and a low of",minweatherReport,"degrees.")
+        # print("Today, it will be",mainweatherReport,"with a high of",maxweatherReport,"degrees and a low of",minweatherReport,"degrees.")
         return mainweatherReport
     except:
         print("Something went wrong")

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml version="1.0">
 	<category>
-        <pattern>RUN SOAP *</pattern>
+        <pattern>TRIGGER *</pattern>
         <template>
-            <system>./scripts/soapAPI.py <star/></system>
+            <system>./scripts/Bamboo.py <star /></system>
         </template>
     </category>
 </aiml>
